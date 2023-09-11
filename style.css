@@ -15,17 +15,6 @@ body {
     box-shadow: 0 0 5px 1px #090b6f85;
 }
 
-
-.side-image {
-    position: absolute;
-    margin-top: 100px;
-    width: 350px; 
-    height: auto; 
-    margin-right: 80px;
-    right:200px;
-    
-}
-
 #login {
     padding :8px;
     background-color: #007BFF;
