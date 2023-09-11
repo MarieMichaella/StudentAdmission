@@ -16,15 +16,7 @@ body {
 }
 
 
-.side-image {
-    position: absolute;
-    margin-top: 100px;
-    width: 350px; 
-    height: auto; 
-    margin-right: 80px;
-    right:200px;
-    
-}
+
 
 #login {
     padding :8px;
@@ -83,7 +75,7 @@ color: #ff6600;
 form {
     max-width: 320px;
     margin: 0 auto;
-    margin-left: 250px;
+    margin-left: 235px;
     height: 380.5px; 
     margin-top: 40px;
     background-color: #fff;
@@ -94,6 +86,22 @@ form {
     align-items: stretch;
     justify-content: space-between;
     box-shadow: 0 0 5px 1px #090b6f85;
+}
+
+.side-image {
+    position: absolute;
+    margin-top: 100px;
+    width: 349px; 
+    height: auto; 
+    margin-right: 56px;
+    right:200px;
+    border-radius: 0px 10px 10px 0px;
+    overflow: hidden;
+    flex: 1 1 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: 0 0 5px 1px #090b6f85;
+    
 }
 
 .side-image {
