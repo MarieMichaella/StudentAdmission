@@ -75,7 +75,7 @@ color: #ff6600;
 form {
     max-width: 320px;
     margin: 0 auto;
-    margin-left: 235px;
+    margin-left: 230px;
     height: 380.5px; 
     margin-top: 40px;
     background-color: #fff;
@@ -94,7 +94,7 @@ form {
     width: 349px; 
     height: auto; 
     margin-right: 56px;
-    right:200px;
+    right:190px;
     border-radius: 0px 10px 10px 0px;
     overflow: hidden;
     flex: 1 1 100%;
