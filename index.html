@@ -53,15 +53,18 @@ form.addEventListener('submit', function (e) {
             const password = document.getElementById('password').value.trim();
 
             let isValid = true;
-            if (email === '' || !isValidEmail(email)) {
-            displayError('emailError', 'Please enter a valid email address');
-            isValid = false;
-            } else if (!email.endsWith('@gmail.com')) {
-            displayError('emailError', 'Email address must end with @gmail.com');
-            isValid = false;
-            } else {
-            hideError('emailError');
-            }
+
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            if (email === '') {
+    displayError('emailError', 'Please enter an email address');
+    isValid = false;
+} else if (!emailRegex.test(email)) {
+    displayError('emailError', 'Please enter a valid email address');
+    isValid = false;
+} else {
+    hideError('emailError');
+}
 
             if (password.length < 8) {
                 displayError('passwordError', 'Password must be 8 or more characters');
@@ -84,9 +87,6 @@ form.addEventListener('submit', function (e) {
             errorElement.textContent = '';
         }
 
-        function isValidEmail(email) {
-            return email.includes('@');
-        }
 
         
     </script>

@@ -306,6 +306,8 @@
 
             let isValid = true;
 
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
             if (fname === '') {
                 displayError('fnameError', 'First name is required');
                 isValid = false;
@@ -319,16 +321,15 @@
             } else {
                 hideError('lnameError');
             }
-
-            if (email === '' ) {
-            displayError('emailError', 'Please enter a valid email address');
-            isValid = false;
-            } else if (!email.endsWith('@gmail.com')) {
-            displayError('emailError', 'Email address must end with @gmail.com');
-            isValid = false;
-            } else {
-            hideError('emailError');
-            }
+            if (email === '') {
+    displayError('emailError', 'Please enter an email address');
+    isValid = false;
+} else if (!emailRegex.test(email)) {
+    displayError('emailError', 'Please enter a valid email address');
+    isValid = false;
+} else {
+    hideError('emailError');
+}
 
             if (phone === "") {
             displayError('phoneError', 'Phone Number is Required');
