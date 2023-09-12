@@ -40,7 +40,7 @@
         <input type="text" id="phone" name="phone">
         <p class="error" id="phoneError"></p>
 
-        <label for="age">Date Of Birth</label>
+        <label for="age">Age</label>
         <input type="date" id="age" name="age">
         <p class="error" id="ageError"></p>
 
@@ -346,7 +346,7 @@
             }
 
             if(age === ""){
-                displayError('ageError', 'Date Of Birth is Required');
+                displayError('ageError', 'Age is Required');
                 isvalid = false;
             } 
              else {
