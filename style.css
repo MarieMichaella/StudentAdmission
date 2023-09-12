@@ -71,27 +71,40 @@ color: #ff6600;
 }
 
 form {
-    max-width: 320px;
+    position: relative; /* Make the form a positioning context for its children */
+    max-width: 700px;
+    max-height:400px;
     margin: 0 auto;
-    margin-left: 235px;
-    height: 380.5px; 
-    margin-top: 40px;
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px 0px 0px 10px;
-
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px #090b6f85;
 }
 
 .side-image {
     position: absolute;
-    margin-top: 100px;
-    width: 631px; 
-    height: 2000x; 
-    margin-right: 56px;
-    right:220px;
+    top: 0; 
+    left: 100%; 
+    transform: translateX(-100%);
+    width: 380px;
+    height: 440px; 
     border-radius: 0px 10px 10px 0px;
-    
 }
+
+
+
+label {
+    font-weight: bold;
+}
+
+#myForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
 
 label {
     display: block;
@@ -101,6 +114,7 @@ label {
 
 input[type="text"],
 input[type="password"] {
+    
     width: 95%;
     padding: 10px;
     margin-bottom: 10px;
@@ -110,6 +124,7 @@ input[type="password"] {
 
 .inputs {
     margin-top:60px;
+    margin-left: -400px;
 }
 
 .error {
@@ -142,5 +157,5 @@ button[type="submit"]:hover {
 }
 
 h2 {
-    text-align: center;
+    margin-left: -400px;
 }
