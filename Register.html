@@ -45,14 +45,10 @@
         <p class="error" id="ageError"></p>
 
         <label>Gender</label>
-        <div>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male" id="gender">Male</label>
-        </div>
-        <div>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female" id="gender">Female</label>
-        </div>
+        <select id="gender" name="gender">
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+    </select>
         <p class="error" id="genderError"></p>
 
         <label for="location">Location</label>
@@ -301,7 +297,6 @@
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const age = document.getElementById('age').value.trim();
-            const gender = document.querySelector('input[name="gender"]:checked');
             const location = document.getElementById('location').value.trim();
             const nationality = document.getElementById('nationality').value.trim();
             const department = document.getElementById('department').value.trim();
@@ -353,12 +348,6 @@
                 hideError('ageError');
             }
 
-            if (!gender) {
-                displayError('genderError', 'Please select a gender');
-                isValid = false;
-            } else {
-                hideError('genderError');
-            }
 
             if (location === '') {
                 displayError('locationError', 'Location is required');
