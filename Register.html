@@ -290,9 +290,8 @@
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             if (isFormValid()) {
-                alert('Form submitted successfully!');
-                
-            }
+                window.location.href = 'welcome.html';
+    }
         });
 
         function isFormValid() {
@@ -311,7 +310,7 @@
 
             let isValid = true;
 
-            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            var emailformat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
             if (fname === '') {
                 displayError('fnameError', 'First name is required');
@@ -329,7 +328,7 @@
             if (email === '') {
     displayError('emailError', 'Please enter an email address');
     isValid = false;
-} else if (!emailRegex.test(email)) {
+} else if (!emailformat.test(email)) {
     displayError('emailError', 'Please enter a valid email address');
     isValid = false;
 } else {
@@ -386,15 +385,17 @@
             hideError('emergencyError');
             }
 
-            if (sname === '') {
-            displayError('snameError', 'Student ID is required');
-            isValid = false;
-            } else if (sname.length !== 5) {
-            displayError('snameError', 'Student ID must be 5 Numbers');
-            isValid = false;
-            } else {
-            hideError('snameError');
-            }
+            const snamePattern = /^\d{5}$/;
+
+if (sname === '') {
+    displayError('snameError', 'Student ID is required');
+    isValid = false;
+} else if (!snamePattern.test(sname)) {
+    displayError('snameError', 'Student ID must be 5 numbers');
+    isValid = false;
+} else {
+    hideError('snameError');
+}
 
             if (password === '') {
         displayError('passwordError', 'Password is required');
